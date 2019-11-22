@@ -22,8 +22,8 @@ const faker = require('faker')
 var locations = [];
 ​
 // Helper function to keep the coordinates within the US
-var randomCoordinates(min, max) {
-  return min + Math.random()*(max + 1 -min)
+var randomCoordinates = (min, max) => {
+  return min + Math.random()*(max + 1 -min);
 }
 
 for (let i = 0; i < 100; i++) {
