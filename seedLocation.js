@@ -21,6 +21,10 @@ const faker = require('faker')
 ​
 var locations = [];
 ​
+// Helper function to keep the coordinates within the US
+var randomCoordinates(min, max) {
+  return min + Math.random()*(max + 1 -min)
+}
 
 for (let i = 0; i < 100; i++) {
     let eventId = i;
@@ -31,8 +35,9 @@ for (let i = 0; i < 100; i++) {
     let State = faker.address.stateAbbr();
     let Zip = faker.address.zipCode();
     let Country = faker.address.country();
-    let Lat = faker.address.latitude();
-    let Long = faker.address.longitude();
+    // These coordinates will keep the latitude and Longitude inside the US
+    let Lat = randomCoordinates(30, 48);
+    let Long = randomCoordinates(-80, -117);
     let how_to_find_us = faker.lorem.sentence();
 ​
     let eventLocation = {
