@@ -61,3 +61,8 @@ let makeLocations = () => {
         locations.push(eventLocation);
     }
 }
+
+makeLocations();
+console.log('test')
+
+module.exports.locations = loctions;
