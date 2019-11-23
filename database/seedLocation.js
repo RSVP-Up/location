@@ -63,6 +63,6 @@ let makeLocations = () => {
 }
 
 makeLocations();
-console.log('test')
+// console.log('test')
 
 module.exports.locations = loctions;
