@@ -1,11 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const db = require('../database/index.js');
+let PORT = 4010;
+
 let app = express();
-// const db = require('../database/index.js');
-let PORT = 3010;
+
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static('public'));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
